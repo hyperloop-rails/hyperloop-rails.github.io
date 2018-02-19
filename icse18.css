@@ -6,9 +6,13 @@
 .title {
 	position: absolute;
 	top: 30%;
+	left: 30%;
+	text-align: center;
 
 }
-
+h3{
+	text-align: center;
+}
 .col-8{
 
 }
@@ -16,3 +20,6 @@
 	position: absolute;
 	top: 9%;
 }
+.ref{
+	background-color: #f4a742;
+} 
