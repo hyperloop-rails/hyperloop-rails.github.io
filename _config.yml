@@ -1,0 +1,56 @@
+# Site settings
+title: Hyperloop-Rails
+email: congy@cs.washington.edu
+description: >
+  Hyperloop-Rails Project Websites
+  providing performance diagnosis for Ruby On Rails project.
+
+#baseurl: "/" # the subpath of your site, e.g. /blog/
+url: https://aksakalli.github.io/jekyll-doc-theme # the base hostname & protocol for your site
+git_address: https://github.com/aksakalli/jekyll-doc-theme
+git_edit_address: https://github.com/aksakalli/jekyll-doc-theme/blob/gh-pages
+
+# theme options from https://bootswatch.com/
+# comment out this to use default Bootstrap
+bootwatch: paper
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+gems:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+  - .gitignore
+  - README.md
+timezone: Europe/Berlin
+defaults:
+- scope:
+    path: _people
+    type: people
+  values:
+    layout: peolpe
+    sectionid: people
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+
+collections:
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  people:
+    permalink: /people/
+    output: true

@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content=
+"text/html; charset=us-ascii">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<link href="index.css" rel="stylesheet">
+</head>
+<body>
+<div class='container-fluid'>
+   <div class='row'>
+   </div>
+   <div class='row'>
+     <div class='col-2'>
+        <div class='title' align='center'>
+	<h2>Hyperloop</h2> 
+	</div>
+     </div>
+     <div class='col-8'>
+	<br/>
+	<h5>Introduction </h5
+	<p>Modern web applications face the challenge of processing a growing amount of data while serving increasingly impatient users. On one hand, popular web applications typically increase their user bases by 5--7% per week in the first few years, with quickly growing data that is produced or consumed by these users and is managed by applications. On the other hand, studies have shown that nearly half of the users expect a site to load in less than 2 seconds and will abandon a site if it is not loaded within 3 seconds, while every extra 0.5 second of latency reduces the overall traffic by 20%. To manage large amounts of data, modern web applications often follow a two-stack architecture, with a front-end application stack fulfilling application semantics and a back-end database management system (DBMS) storing persistent data and processing data retrieval requests. To help developers construct such database-backed web applications, Object Relational Mapping (ORM) frameworks have become increasingly popular, with implementations in all common general-purpose languages. Unfortunately, ORM frameworks inevitably bring concerns to the performance and scalability of web applications, whose multi-stack nature demands cross-stack performance understanding and optimization.</p>
+	<p>Hyperloop aims to solve the performance problems of applications built upon Object-Relational Mapping (We mostly focus on Ruby on Rails). It contains a database inefficiency study and a real world performance bug study which includes the bug tracking system issues and profiling results. Also, a plugin of RubyMine, <a>PowerStation</a>, is under development based on the findings of performance bug study.</p>
+	<h5> Publications </h5>
+	<Strong><a href='./220-HowNotStructure.pdf'>ICSE2018: How not to structure your database-backed web applications: a study of performance bugs in the wild.</a></strong>
+	<br/>
+	<div class='ref'>
+	<pre>
+	@InProceedings{Junwen+18-ICSE,
+     	     Author =  {Junwen Yang and Cong Yan and Pranav Subramaniam and Shan Lu and Alvin Cheung},
+              Title = "{How not to structure your database-backed web applications: a study of performance bugs in the wild}"
+          Booktitle =  {International Conference on Software Engineering (ICSE)},
+               Year =  {2018}
+	}
+	</pre>
+	</div>
+	<h6>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href='https://docs.google.com/forms/d/e/1FAIpQLScyfauBa8YgnlumPU-6YW5x5s9xvoU9cdBXysE_EUmslIcDFA/formResponse'>Replication Package</a></h6>
+	<br/>
+	<Strong><a href='study_db.pdf'>CIKM2017:Understanding Database Performance Inefficiencies in Real-world Web Applications</a></strong>
+        <br/>
+	<div class='ref'>
+        <pre>
+        @InProceedings{Congy+17-CIKM,
+             Author =  {Cong Yan and Junwen Yang and Alvin Cheung and Shan Lu},
+              Title = "{Understanding Database Performance Inefficiencies in Real-world Web Applications}"
+          Booktitle =  {CIKM},
+               Year =  {2017}
+        }
+        </pre>
+	</div>
+	<p>If our materials are useful for your research, we would appreciate if you cite our paper.</p>
+	<p>Last updated: Feb. 11th, 2018</p>
+	</div>
+    </div>
+  </div>
+</div>
+<!--
+<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=R3WxLXiBgDE3PnZqZrUYLnAnMq7FbY5diXx9_0a_weU&cl=ffffff&w=a"></script>
+-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
