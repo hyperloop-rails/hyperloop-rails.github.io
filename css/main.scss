@@ -1,0 +1,111 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+
+
+
+@import
+  {% if site.bootwatch %}
+    "bootswatch/{{site.bootwatch | downcase}}/variables",
+  {% endif %}
+
+  "bootstrap",
+
+  {% if site.bootwatch %}
+    "bootswatch/{{site.bootwatch | downcase}}/bootswatch",
+  {% endif %}
+
+  "syntax-highlighting",
+  "typeahead"
+;
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  font-family: 'PT Sans', sans-serif;
+  padding-top: $navbar-height + $navbar-margin-bottom;
+  margin-bottom: 46px;
+}
+
+.navbar-brand{
+  img{
+    margin: -$navbar-padding-vertical 0;
+    height: $navbar-height;
+    padding: 10px 0;
+  }
+}
+
+
+.header-container {
+  background-color: black;
+  background: url('../img/hyperloop_train_2.jpg') no-repeat 50% 0;
+  color: #fff;
+
+  h1 {
+    color: #fff;
+    font-weight: 700;
+  }
+  // background-attachment: fixed;
+  background-size: cover;
+  background-position: center 36%;
+  margin-top: -37px;
+}
+.navbar-container {
+  font-size: 16px;
+}
+.page-content {
+  padding-bottom: 20px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 46px;
+  padding-top: 10px;
+  background-color: $gray-lighter;
+  color: $gray-dark;
+}
+
+.post-list-container {
+  li a.active {
+    font-weight: bold;
+  }
+}
+*[id]:before {
+  display: block;
+  content: " ";
+  margin-top: -75px;
+  height: 75px;
+  visibility: hidden;
+}
+.navbar-form .has-feedback .form-control-feedback{
+  top:10px
+}
+
+.people-item {
+  display: inline-block;
+  margin: 10px;
+  img { height: 168px; width: 120px; }
+}
+.people-item-list { text-align: center; }
+
+.container {
+  h2 {
+    font-weight: 500;
+    font-size: 32px;
+  }
+  p { line-height: 1.5em; }
+  .list-publication {
+    font-size: 20px;
+    .description {font-style: italic; font-weight: 400;}
+  }
+  .main-page-content { line-height: 1.5em; font-size: 20px;}
+}
+
