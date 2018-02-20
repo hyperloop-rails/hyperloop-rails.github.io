@@ -1,14 +1,14 @@
 # Site settings
-title: Hyperloop-Rails
+title: Hyperloop
 email: congy@cs.washington.edu
 description: >
-  Hyperloop-Rails Project Websites
-  providing performance diagnosis for Ruby On Rails project.
+  Hyperloop Project Websites
+  providing performance diagnosis for Ruby-on-Rails project.
 
 #baseurl: "/" # the subpath of your site, e.g. /blog/
-url: https://aksakalli.github.io/jekyll-doc-theme # the base hostname & protocol for your site
-git_address: https://github.com/aksakalli/jekyll-doc-theme
-git_edit_address: https://github.com/aksakalli/jekyll-doc-theme/blob/gh-pages
+url: https://github.com/hyperloop-rails # the base hostname & protocol for your site
+git_address: https://github.com/hyperloop-rails
+git_edit_address: https://github.com/hyperloop-rails/hyperloop-rails.github.io/blob/gh-pages
 
 # theme options from https://bootswatch.com/
 # comment out this to use default Bootstrap
