@@ -1,65 +1,94 @@
-<html>
-<head>
-<meta http-equiv="Content-Type" content=
-"text/html; charset=us-ascii">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-<link href="index.css" rel="stylesheet">
-</head>
-<body>
-<div class='container-fluid'>
-   <div class='row'>
-   </div>
-   <div class='row'>
-     <div class='col-2'>
-        <div class='title' align='center'>
-	<h2>Hyperloop</h2> 
-	</div>
-     </div>
-     <div class='col-8'>
-	<br/>
-	<h5>Introduction </h5
-	<p>Modern web applications face the challenge of processing a growing amount of data while serving increasingly impatient users. On one hand, popular web applications typically increase their user bases by 5--7% per week in the first few years, with quickly growing data that is produced or consumed by these users and is managed by applications. On the other hand, studies have shown that nearly half of the users expect a site to load in less than 2 seconds and will abandon a site if it is not loaded within 3 seconds, while every extra 0.5 second of latency reduces the overall traffic by 20%. To manage large amounts of data, modern web applications often follow a two-stack architecture, with a front-end application stack fulfilling application semantics and a back-end database management system (DBMS) storing persistent data and processing data retrieval requests. To help developers construct such database-backed web applications, Object Relational Mapping (ORM) frameworks have become increasingly popular, with implementations in all common general-purpose languages. Unfortunately, ORM frameworks inevitably bring concerns to the performance and scalability of web applications, whose multi-stack nature demands cross-stack performance understanding and optimization.</p>
-	<p>Hyperloop aims to solve the performance problems of applications built upon Object-Relational Mapping (We mostly focus on Ruby on Rails). It contains a database inefficiency study and a real world performance bug study which includes the bug tracking system issues and profiling results. Also, a plugin of RubyMine, <a>PowerStation</a>, is under development based on the findings of performance bug study.</p>
-	<h5> Publications </h5>
-	<Strong><a href='./220-HowNotStructure.pdf'>ICSE2018: How not to structure your database-backed web applications: a study of performance bugs in the wild.</a></strong>
-	<br/>
-	<div class='ref'>
-	<pre>
-	@InProceedings{Junwen+18-ICSE,
-     	     Author =  {Junwen Yang and Cong Yan and Pranav Subramaniam and Shan Lu and Alvin Cheung},
-              Title = "{How not to structure your database-backed web applications: a study of performance bugs in the wild}"
-          Booktitle =  {International Conference on Software Engineering (ICSE)},
-               Year =  {2018}
-	}
-	</pre>
-	</div>
-	<h6>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href='https://docs.google.com/forms/d/e/1FAIpQLScyfauBa8YgnlumPU-6YW5x5s9xvoU9cdBXysE_EUmslIcDFA/formResponse'>Replication Package</a></h6>
-	<br/>
-	<Strong><a href='study_db.pdf'>CIKM2017:Understanding Database Performance Inefficiencies in Real-world Web Applications</a></strong>
-        <br/>
-	<div class='ref'>
-        <pre>
-        @InProceedings{Congy+17-CIKM,
-             Author =  {Cong Yan and Junwen Yang and Alvin Cheung and Shan Lu},
-              Title = "{Understanding Database Performance Inefficiencies in Real-world Web Applications}"
-          Booktitle =  {CIKM},
-               Year =  {2017}
-        }
-        </pre>
-	</div>
-	<p>If our materials are useful for your research, we would appreciate if you cite our paper.</p>
-	<p>Last updated: Feb. 11th, 2018</p>
-	</div>
+---
+layout: default
+---
+
+<div class="header-container jumbotron">
+    <div class="container">
+        <center>
+            <h1 style="color:black">Hyperloop-Rails</h1>
+            <p style="color:black; font-size:24px">Solving performance issues for your web applications</p>
+        </center>
+        <!-- <p><a class="btn btn-primary btn-lg" href="{{ "/docs/home/" | prepend: site.baseurl }}" role="button">Learn more</a></p> -->
     </div>
-  </div>
 </div>
-<!--
-<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=R3WxLXiBgDE3PnZqZrUYLnAnMq7FbY5diXx9_0a_weU&cl=ffffff&w=a"></script>
--->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
-</body>
-</html>
 
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header-light regular-pad">What is Hyperloop?</h2>
+            <!-- <blockquote> -->
+              <p class="main-page-content">Hyperloop is an ongoing research project that aims at detecting and solving 
+                    performance problems for web applications
+                    built with ORM (Object-Relational Mapping) frameworks, 
+                    mainly Ruby on Rails. Currently it conains:</p>
+                    <ul class="main-page-content">
+                        <li>A comprehensive study on existing open-source applications built with Ruby-On-Rails
+                            (with a <a href='https://docs.google.com/forms/d/e/1FAIpQLScyfauBa8YgnlumPU-6YW5x5s9xvoU9cdBXysE_EUmslIcDFA/formResponse'>replication package</a>
+                            of these applications).
+
+                        </li>
+                        <li>A <a href="docs/home/">a systematic tool</a> to identify and solve some of the
+                            common performance inefficiencies found in our study.
+                        </li>
+                    </ul>
+                <p class="main-page-content">
+                    We are working on providing better solutions to solve more inefficiencies
+                    and more handy tools for application developers.
+                </p>
+            <!-- </blockquote> -->
+        </div>
+        <!-- <div class="col-md-6 text-center">
+            <img src="img/jekyll-dark.png" alt="" class="img-responsive">
+        </div> -->
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-12">
+        <h2 class="header-light regular-pad">Publications</h2>
+        <ul class="list-publication">
+            <li>
+                <span class="title">
+                    <a href="./220-HowNotStructure.pdf">How not to structure your database-backed web applications: a study of performance bugs in the wild.</a>
+                </span>
+                <span class="authors">
+                    Junwen Yang,
+                    Cong Yan,
+                    Pranav Subramaniam,
+                    Shan Lu and Alvin Cheung,
+                </span>
+                <span class="description">
+                    ICSE'18
+                </span>
+            </li>
+            <li>
+                <span class="title">
+                    <a href="./study_db.pdf">Understanding Database Performance Inefficiencies in Real-world Web Applications.</a>
+                </span>
+                <span class="authors">
+                    Cong Yan,
+                    Junwen Yang,
+                    Alvin Cheung and Shan Lu,
+                </span>
+                <span class="description">
+                    CIKM'17
+                </span>
+            </li>
+        </ul>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <!-- <div class="row">
+        <div class="col-md-12">
+        <h2 class="header-light regular-pad">Replication Packages</h2>
+        <p style="font-size: 20px">Click <a href='https://docs.google.com/forms/d/e/1FAIpQLScyfauBa8YgnlumPU-6YW5x5s9xvoU9cdBXysE_EUmslIcDFA/formResponse'>here</a>
+        to get the replication packages for our studies.</p>
+        </div>
+    </div> -->
+
+</div>
