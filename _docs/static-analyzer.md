@@ -6,8 +6,8 @@ permalink: /docs/static-analyzer/
 Our [static analyzer](https://github.com/hyperloop-rails/static_analyzer)
 reads the application code,
 analyzes the control flow and data flow, and identifies database-query-related
-performance inefficiencies listed in both our [database study](study_db.pdf)
-and [program practice study]('220-HowNotStructure.pdf').
+performance inefficiencies listed in both our [database study](../../study_db.pdf)
+and [program practice study](../../220-HowNotStructure.pdf).
 
 Currently this tool is dumping analysis result into files. We are working
 on an easier-to-understand wrapup to present the result.
