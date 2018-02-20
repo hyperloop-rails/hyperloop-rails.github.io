@@ -7,7 +7,7 @@ redirect_from: /docs/index.html
 Our [static checker](https://github.com/hyperloop-rails/static-checker)
 analyzes application's source code, finds all API misuses and
 suggests a more efficient API to replace with.
-Common API misuse patterns are summarized in our [paper]('./220-HowNotStructure.pdf').
+Common API misuse patterns are summarized in our [paper]('220-HowNotStructure.pdf').
 More specifically, the API misuses detected in this checker includes:
 
 1. `any?`, to be replaced with (=>) `exists?`
