@@ -3,7 +3,7 @@ title: Static Analyzer
 permalink: /docs/static-analyzer/
 ---
 
-Our [static analyzer](https://github.com/hyperloop-rails/static_analyzer)
+Our [static analyzer](https://github.com/hyperloop-rails/static-analyzer)
 reads the application code,
 analyzes the control flow and data flow, and identifies database-query-related
 performance inefficiencies listed in both our [database study](../../study_db.pdf)
