@@ -14,18 +14,17 @@ on an easier-to-understand wrapup to present the result.
 It is able to detect the following database-related ineffiency patterns:
 
 1. Loop invariants (i.e., redundant queries in loop, and the output includes the detailed information such as the location of the invariant query, the start, and end location of the loop, output is the loop_invariant.xml file)
-2. redundant field retrieval, e.g., issuing a `SELECT *` query but only a few fields are used
+2. the dead store queries (i.e., there is no referrence to the object between two reloads, the position of the dead store query will be output to the dead_store.xml file)
+
+TODO:
+1. inefficient partial rendering
+2. common subexpression sharing
 3. redundant table retrieval, e.g., issuing a `SELECT * FROM A JOIN B` query but only table A is being used
 4. the query that might return unlimited tuples
 5. the query that only uses other query's result as parameters
 6. the queries that share subexpressions
 7. the constant predicates in queries (i.e., predicate that does not take dynamic user input as parameters)
-8. the dead store queries (i.e., there is no referrence to the object between two reloads, the position of the dead store query will be output to the dead_store.xml file)
-
-TODO:
-1. inefficient partial rendering
-2. common subexpression sharing
-
+8. redundant field retrieval, e.g., issuing a `SELECT *` query but only a few fields are used
 
 #### Prerequisites
 
