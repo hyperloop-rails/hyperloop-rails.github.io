@@ -62,7 +62,7 @@ $python generate_dataflow_log.py  APPNAME
 
 2. Run the static analysis:
 
-* 
+* Go to the controller\_model\_analysis
 ```
 $cd controller_model_analysis
 $ruby main.rb --help
