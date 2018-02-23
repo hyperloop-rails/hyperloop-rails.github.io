@@ -26,7 +26,7 @@ To turn on/off any of the above detections, modify the `controller_model_analysi
 
 #### Prerequisites
 
-1. Get the [jruby for orm](https://github.com/congy/jruby_for_orm) and install following the instructions.
+1. Get the [jruby for orm](https://github.com/congy/jruby_for_orm) and install following the instructions. You can also download the compioled jruby from [compiled_jruby](https://github.com/hyperloop-rails/compiled-jruby) and run it according to the instructions.
 
 2. Deploy the application and make sure it runs successfully.
 
