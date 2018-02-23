@@ -28,13 +28,14 @@ To turn on/off any of the above detections, modify the `controller_model_analysi
 
 1. Get the [jruby for orm](https://github.com/congy/jruby_for_orm) and install following the instructions. You can also download the compioled jruby from [compiled_jruby](https://github.com/hyperloop-rails/compiled-jruby) and configure your environment path as follows:
 
-* after cloning compiled_jruby repo, go to the directory, and get the path of jruby called JRUBY_PATH
-```
-JRUBY_PATH=`pwd`
-```
-* export the jruby path to your environment PATH
-```
-export PATH=$JRUBY_PATH:$PATH
+  * after cloning compiled_jruby repo, go to the directory, and get the path of jruby called JRUBY_PATH
+  ```
+  JRUBY_PATH=`pwd`
+  ```
+  * export the jruby path to your environment PATH
+  ```
+  export PATH=$JRUBY_PATH:$PATH
+  ```
 
 2. Deploy the application and make sure it runs successfully.
 
