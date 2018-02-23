@@ -57,7 +57,7 @@ If there are only .erb files in views, it is probably fine. But if you are using
 * Use installed jruby to generate dataflow log. Checkout `static_analyzer/applications/generate_dataflow_log.py` and applications under `applications/` folder for more details. 
 ```
 $cd applications/
-$python generate_dataflow_log.py APPNAME
+$ruby main.rb -a APPNAME
 ```
 
 2. Run the static analysis:
