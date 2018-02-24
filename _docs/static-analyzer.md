@@ -41,7 +41,7 @@ TODO:
 
 2. Deploy the application and make sure it runs successfully.
 
-#### Steps to run (TBD)
+#### Steps to run
 
 
 1. Preprocess.
