@@ -6,7 +6,7 @@ permalink: /docs/static-analyzer/
 Our [static analyzer](https://github.com/hyperloop-rails/static-analyzer)
 reads the application code,
 analyzes the control flow and data flow, and identifies database-query-related
-performance inefficiencies listed in both our [database study](../../study_db.pdf)
+performance inefficiencies listed in both our [database-related study](../../study_db.pdf)
 and [program practice study](../../220-HowNotStructure.pdf).
 
 Currently this tool is dumping analysis result into files. We are working
@@ -25,7 +25,7 @@ It also dumps a `stats.xml` which shows query-related statistics, for instance,
 + the size of redundantly-retrieved data (when query issues `select *` instead of projecting fields that are used)
 + ...
 
-These statistics will provide a sense of possible performance problems (and how serious they are) in each action. For more details, checkout our [database study](../../study_db.pdf).
+These statistics will provide a sense of possible performance problems (and how serious they are) in each action. For more details, checkout our [database-related study](../../study_db.pdf).
 
 The following is a list of problem inefficiencies hyperloop is trying to automatically detect.
 
@@ -66,7 +66,7 @@ Yard is used as ruby file parser.
 
 * create a folder for your application under the `applications/` folder:
 ```
-$ cd static-analyzer
+$ cd static-analyzer/
 $ cd applications/
 $ mkdir APP_NAME/
 $ cd ..
@@ -85,8 +85,8 @@ Currently we only handle *.erb* file (.haml files might also work, but with litt
 
 * MAKE A COPY of your application folder:
 ```
-$ cp -r APP_FOLDER NEW_APP_FOLDER
-$ cd NEW_APP_FOLDER
+$ cp -r APP_FOLDER/ NEW_APP_FOLDER/
+$ cd NEW_APP_FOLDER/
 ```
 
 * make sure the following file exists:
@@ -104,7 +104,7 @@ If `app/helpers` exists, all view rendering calls in helpers will be replaced to
 
 * copy other folders to `ANALYZER_APP_PATH`, if ruby file exists in those folders, for example:
 ```
-$ cp app/mailers ANALYZER_APP_PATH/
+$ cp app/mailers/ ANALYZER_APP_PATH/mailers/
 ```
 
 Then we get all the files needed for static analysis.
@@ -112,8 +112,8 @@ Then we get all the files needed for static analysis.
 
 3. Use jruby to get dataflow and control flow: 
 ```
-$cd path-to-static-analyzer/applications/
-$python generate_dataflow_log.py  APP_NAME
+$ cd path-to-static-analyzer/applications/
+$ python generate_dataflow_log.py  APP_NAME
 ```
 
 4. Run the static analysis:
