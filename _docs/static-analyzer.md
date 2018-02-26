@@ -13,76 +13,113 @@ Currently this tool is dumping analysis result into files. We are working
 on an easier-to-understand wrapup to present the result.
 It is able to detect the following database-related ineffiency patterns:
 
-1. Loop invariants (i.e., redundant queries in loop, and the output includes the detailed information such as the location of the invariant query, the start, and end location of the loop, output is the loop_invariant.xml file)
-2. the dead store queries (i.e., there is no referrence to the object between two reloads, the position of the dead store query will be output to the dead_store.xml file)
+1. Loop invariants (i.e., redundant queries in loop, and the output includes the detailed information such as the location of the invariant query, the start, and end location of the loop, output is the `loop_invariant.xml` file)
+2. the dead store queries (i.e., there is no referrence to the object between two reloads, the position of the dead store query will be output to the `dead_store.xml` file)
 
-TODO:
+It also dumps a `stats.xml` which shows query-related statistics, for instance, 
+⋅⋅* the number of possibly-issued read/write queries, 
+⋅⋅* the number of queries in loop, 
+⋅⋅* the source of query parameters (from constant values, user inputs, other queries, etc)
+⋅⋅* the use of query result (shown on webpage, as parameter to other queries, as branching conditions, etc)
+⋅⋅* the number of queries return limited/unbounded results
+⋅⋅* the size of redundantly-retrieved data (when query issues `select *` instead of projecting fields that are used)
+⋅⋅* ...
+
+These statistics will provide a sense of possible performance problems (and how serious they are) in each action. For more details, checkout our [database study](../../study_db.pdf).
+
+The following is a list of problem inefficiencies hyperloop is trying to automatically detect.
+
 1. inefficient partial rendering
 2. common subexpression sharing
 3. redundant table retrieval, e.g., issuing a `SELECT * FROM A JOIN B` query but only table A is being used
-4. the query that might return unlimited tuples
-5. the query that only uses other query's result as parameters
-6. the queries that share subexpressions
-7. the constant predicates in queries (i.e., predicate that does not take dynamic user input as parameters)
-8. redundant field retrieval, e.g., issuing a `SELECT *` query but only a few fields are used
+4. the queries that share subexpressions
+5. the constant predicates in queries (i.e., predicate that does not take dynamic user input as parameters)
+6. redundant field retrieval, e.g., issuing a `SELECT *` query but only a few fields are used
 
 #### Prerequisites
 
 1. Get the [jruby for orm](https://github.com/congy/jruby_for_orm) and install following the instructions. You can also download the compioled jruby from [compiled_jruby](https://github.com/hyperloop-rails/compiled-jruby) and configure your environment path as follows:
 
-     * after cloning compiled_jruby repo, go to the directory, and get the path of jruby called JRUBY_PATH
-     ```
-     JRUBY_PATH=`pwd`
-     ```
-     * export the jruby path to your environment PATH
-     ```
-     export PATH=$JRUBY_PATH:$PATH
-     ```
+* after cloning this repo, go to the directory and set `JRUBY_PATH`. Also make sure `JAVA_HOME` is properly set.
+```
+$ cd compiled-jruby
+$ export JRUBY_PATH=`pwd`/bin
+```
+
+* then export the jruby path to your environment PATH
+```
+$ export PATH=$JRUBY_PATH:$PATH
+```
 
 2. Deploy the application and make sure it runs successfully.
 
+3. Install [yard](https://github.com/lsegal/yard.git) by:
+```
+$ gem install yard
+```
+Yard is used as ruby file parser.
+
+
 #### Steps to run
 
+1. Create directory and get the list of actions.
 
-1. Preprocess.
-
-* Copy the ruby files to some directory APPDIR, under the `applications/` folder:
+* create a folder for your application under the `applications/` folder:
 ```
-$cd applications/
-$mkdir APPNAME/
-$cd ..
+$ cd static-analyzer
+$ cd applications/
+$ mkdir APP_NAME/
+$ cd ..
 ```
+Now we assume `APP_DIR` to be `path-to-static-analyzer/applications/APP_NAME`
 
-* Go to your application's directory, run:
+* go to your application's directory, run:
 ```
 $rake routes | tail -n +2 | awk '{ for (i=1;i<=NF;i++) if (match($i, /.#./)) print $i}' | sed -e 's/#/,/g' | sort | uniq
 ```
-to get the list of actions that can be invoked by the app, copy it to `APPDIR/calls.txt`
+to get the list of actions that can be invoked by the app, copy it to `APP_DIR/calls.txt`
 
-* Follow `preprocess_views/README.md` to extract the code from view.
 
-If there are only .erb files in views, it is probably fine. But if you are using haml, the convertion from haml to erb may run into some trouble.
+2. Replace view rendering calls with ruby code in view files.
+Currently we only handle *.erb* file (.haml files might also work, but with little confidence...)
 
-* Copy schema.rb in your app to `APPDIR/`.
-
-* Use installed jruby to generate dataflow log. Checkout `static_analyzer/applications/generate_dataflow_log.py` and applications under `applications/` folder for more details. 
+* MAKE A COPY of your application folder:
 ```
-$cd applications/
-$python generate_dataflow_log.py  APPNAME
+$ cp -r APP_FOLDER NEW_APP_FOLDER
+$ cd NEW_APP_FOLDER
 ```
 
-2. Run the static analysis:
+* make sure the following file exists:
+```
+$ ls db/schema.rb
+$ ls config/routes.rb
+```
 
-* Go to the controller\_model\_analysis
+* run the script to replace view rendering calls in controllers with all ruby code extracted from view files (mainly .erb files), and replace `ANALYZER_APP_PATH` with the path where the analyzer stores the application, e.g., `path_to_static-analyzer/applications/APP_NAME`:
 ```
-$cd controller_model_analysis
-$ruby main.rb --help
+$ ./preprocess.sh ANALYZER_APP_PATH
 ```
-to get the options
 
-* Basically, to get the statistics and program flow of a specific action from an app, you would like to run:
+If `app/helpers` exists, all view rendering calls in helpers will be replaced too.
+
+* copy other folders to `ANALYZER_APP_PATH`, if ruby file exists in those folders, for example:
 ```
-$ruby main.rb -d DIR_TO_APP_FILES -s CONTROLLER_NAME,ACTION_NAME
+$ cp app/mailers ANALYZER_APP_PATH/
+```
+
+Then we get all the files needed for static analysis.
+
+
+3. Use jruby to get dataflow and control flow: 
+```
+$cd path-to-static-analyzer/applications/
+$python generate_dataflow_log.py  APP_NAME
+```
+
+4. Run the static analysis:
+```
+$ cd controller_model_analysis
+$ ruby main.rb -d DIR_TO_APP_FILES -s CONTROLLER_NAME,ACTION_NAME
 ```
 
 For example,
@@ -90,15 +127,17 @@ For example,
 $ruby main.rb -s -d ../applications/forem PostsController,index
 ```
 
-The `instructions` in the form of [JRuby intermediate representation](https://www.infoq.com/news/2009/11/jruby-ir) that will be executed by an action, together with the data dependencies among these instructions,  will be printed to the screen.
+You may run
+```
+$ruby main.rb --help
+```
+to get the options
+
 
 * If you wish to run all actions from an application, do:
 ```
 $ruby main.rb -a -d DIR_TO_APP_FILES
 ```
-
-Results will be saved to the folder under the app directory.
-The folder name is defined under global.rb, and by default is `result/`.
 
 #### Analysis on Open-source Applications:
 
