@@ -17,13 +17,13 @@ It is able to detect the following database-related ineffiency patterns:
 2. the dead store queries (i.e., there is no referrence to the object between two reloads, the position of the dead store query will be output to the `dead_store.xml` file)
 
 It also dumps a `stats.xml` which shows query-related statistics, for instance, 
-⋅⋅* the number of possibly-issued read/write queries, 
-⋅⋅* the number of queries in loop, 
-⋅⋅* the source of query parameters (from constant values, user inputs, other queries, etc)
-⋅⋅* the use of query result (shown on webpage, as parameter to other queries, as branching conditions, etc)
-⋅⋅* the number of queries return limited/unbounded results
-⋅⋅* the size of redundantly-retrieved data (when query issues `select *` instead of projecting fields that are used)
-⋅⋅* ...
++ the number of possibly-issued read/write queries, 
++ the number of queries in loop, 
++ the source of query parameters (from constant values, user inputs, other queries, etc)
++ the use of query result (shown on webpage, as parameter to other queries, as branching conditions, etc)
++ the number of queries return limited/unbounded results
++ the size of redundantly-retrieved data (when query issues `select *` instead of projecting fields that are used)
++ ...
 
 These statistics will provide a sense of possible performance problems (and how serious they are) in each action. For more details, checkout our [database study](../../study_db.pdf).
 
