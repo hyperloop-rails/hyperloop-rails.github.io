@@ -29,7 +29,7 @@ When clicking `Fix` on the left-hand-side window, PowerStation fixes the selecte
 ![Inefficient API fix](../../screenshots/inefficient_api_after.png)
 
 * Common Subpexression (CS):
-![Common Subexpression](../../screenshots/common_subexpression.png)
+![Common Subexpression](../../screenshots/common_subexpr.png)
 
 * Inefficient Rendering (IR):
 ![Common Subexpression](../../screenshots/inefficient_render.png)
