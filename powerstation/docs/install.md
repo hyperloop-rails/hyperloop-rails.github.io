@@ -28,7 +28,7 @@ $ gem install activesupport
 
 4. Download [powerstation](https://plugins.jetbrains.com/plugin/10604-powerstation).
 
-5. Open RubyMine and go to `preference`->`plugin`, then click `Install plugin from disk`, and select the powerstation jar file just downloaded.
+5. Open RubyMine and go to `preference`->`plugin`, then click `Install plugin from disk`, and select the powerstation jar file just downloaded.<br/>
 ![Install plugin](../../screenshots/load_plugin.png)
 
 6. Open your project with RubyMine and you're ready to go!
