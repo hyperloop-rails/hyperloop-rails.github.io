@@ -68,7 +68,7 @@ This code piece issues two queries: `SELECT COUNT(*) from blogs where user_id = 
 
 ```
 @u = user.blogs
-@u.count()
+@u.count
 ```
 
 Only one query is issued, while in the second line `u.count()` computes the count
