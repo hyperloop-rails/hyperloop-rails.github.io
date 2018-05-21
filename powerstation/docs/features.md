@@ -38,9 +38,9 @@ user.where(:name=?).any?
 ``` 
 The above code issues a query to check whether there exists a user with specific name. The `any?` API issues a `COUNT` query and return a boolean. However, replacing it with 
 ```
-user.where(:name=?).exist?
+user.where(:name=?).exists?
 ``` 
-is more efficient since the `exist?` issues a `LIMIT 1` query which usually runs faster than `COUNT`.
+is more efficient since the `exists?` issues a `LIMIT 1` query which usually runs faster than `COUNT`.
 
 Following is the list of APIs PowerStaion checks and their replacements:
 
@@ -71,7 +71,7 @@ This code piece issues two queries: `SELECT COUNT(*) from blogs where user_id = 
 @u.count
 ```
 
-Only one query is issued, while in the second line `u.count()` computes the count
+Only one query is issued, while in the second line `u.count` computes the count
 from the data already loaded in memory.
 
 #### Inefficient Rendering
