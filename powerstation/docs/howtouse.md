@@ -9,6 +9,7 @@ layout: powerstation
 <div class="col-md-12" markdown="1">
 
 We use a small [blogging project](https://github.com/jwyoung1818/blog) to explain how to use PowerStation.
+
 You can also watch the introduction video(https://www.youtube.com/watch?v=bba_L0_IAuo).
 
 1. Open your project with RubyMine:<br/>
