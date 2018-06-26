@@ -22,6 +22,7 @@ Make sure the `export` commands are also saved to `~/.bashrc`.
 ```
 $ gem install yard
 $ gem install activesupport
+$ gem install work_queue
 ```
 
 3. Download and install [RubyMine](https://www.jetbrains.com/ruby/).
