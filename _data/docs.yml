@@ -1,10 +1,10 @@
-- title: Analysis Tool
+- title: API misuse summary
   docs:
-  - home
-  - static-analyzer
+  - api-misuse
 
 - title: Replication Package
-  docs: dockers
+  docs: 
+  - home
 
 - title: Issue Reports
   docs:

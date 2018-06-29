@@ -1,22 +1,42 @@
 ---
-title: Static Analyzer
-permalink: /docs/static-analyzer/
+title: Powerstation command line tool
+permalink: /powerstation/docs/command-line/
+layout: powerstation_smallfont
 ---
 
-Our [static analyzer](https://github.com/hyperloop-rails/static-analyzer)
-reads the application code,
-analyzes the control flow and data flow, and identifies database-query-related
-performance inefficiencies listed in both our [database-related study](../../study_db.pdf)
-and [program practice study](../../220-HowNotStructure.pdf).
+<div class="container" markdown="1">
+<div class="row" markdown="1">
+<div class="col-md-12" markdown="1">
 
-Currently this tool is dumping analysis result into files. We are working
-on an easier-to-understand wrapup to present the result.
-It is able to detect the following database-related ineffiency patterns:
+This is the documentation for powerstation command-line verion ([source code](https://github.com/hyperloop-rails/powerstation)).
+It performs program analysis to find out performance anti-patterns.
+The analysis contains two parts. The first finds the common API misuses by simply matching the patterns in the source code. The second requires program analysis, constructing program flow graphs to find out the pattern.
 
-1. Loop invariants (i.e., redundant queries in loop, and the output includes the detailed information such as the location of the invariant query, the start, and end location of the loop, output is the `loop_invariant.xml` file)
-2. the dead store queries (i.e., there is no referrence to the object between two reloads, the position of the dead store query will be output to the `dead_store.xml` file)
+## [Static checker for API misuses](https://github.com/hyperloop-rails/powerstation/tree/master/static-checker):
 
-It also dumps a `stats.xml` which shows query-related statistics, for instance, 
+
+##### Prerequisites:
+
+Install [pcre](http://pcre.org/).
+
+##### Steps to run:
+
+* To use command line version of this checker, simply run
+```
+$./string-matching.sh
+```
+
+* To use the java version, run
+```
+$java -jar StaticChekcer.jar folder
+```
+and the result is dumped into "inefficientAPI.xml"
+
+## [Program analyzer](https://github.com/hyperloop-rails/powerstation/tree/master/powerstation/command_line_tool):
+
+This analyzer able to detect non-API-related patterns as listed in [features](../features).
+
+Besides the anti-patterns, it also dumps a `stats.xml` which shows query-related statistics, for instance, 
 + the number of possibly-issued read/write queries, 
 + the number of queries in loop, 
 + the source of query parameters (from constant values, user inputs, other queries, etc)
@@ -27,16 +47,7 @@ It also dumps a `stats.xml` which shows query-related statistics, for instance,
 
 These statistics will provide a sense of possible performance problems (and how serious they are) in each action. For more details, checkout our [database-related study](../../study_db.pdf).
 
-The following is a list of problem inefficiencies hyperloop is trying to automatically detect.
-
-1. inefficient partial rendering
-2. common subexpression sharing
-3. redundant table retrieval, e.g., issuing a `SELECT * FROM A JOIN B` query but only table A is being used
-4. the queries that share subexpressions
-5. the constant predicates in queries (i.e., predicate that does not take dynamic user input as parameters)
-6. redundant field retrieval, e.g., issuing a `SELECT *` query but only a few fields are used
-
-#### Prerequisites
+##### Prerequisites
 
 1. Get the [jruby for orm](https://github.com/congy/jruby_for_orm) and install following the instructions. You can also download the compioled jruby from [compiled_jruby](https://github.com/hyperloop-rails/compiled-jruby) and configure your environment path as follows:
 
@@ -60,7 +71,7 @@ $ gem install yard
 Yard is used as ruby file parser.
 
 
-#### Steps to run
+##### Steps to run
 
 1. Create directory and get the list of actions.
 
@@ -139,7 +150,7 @@ to get the options
 $ruby main.rb -a -d DIR_TO_APP_FILES
 ```
 
-#### Analysis on Open-source Applications:
+##### Analysis on Open-source Applications:
 
 There are already many applications that are preprocessed and ready to be analyzed by this tool. 
 These apps are under the `applications/` directory.

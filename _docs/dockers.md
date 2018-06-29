@@ -1,6 +1,7 @@
 ---
 title: Docker Images
-permalink: /docs/dockers/
+permalink: /docs/home/
+redirect_from: /docs/index.html
 ---
 
 We have made the replication packages for our [study]('./220-HowNotStructure.pdf') 
