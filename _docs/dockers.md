@@ -4,7 +4,7 @@ permalink: /docs/home/
 redirect_from: /docs/index.html
 ---
 
-We have made the replication packages for our [study]('./220-HowNotStructure.pdf') 
+We have made the replication packages for our [study]('../220-HowNotStructure.pdf') 
 available, in the form of [docker images](https://hub.docker.com/u/icse2018acm/).
 These packages contain the deployed application (of the version we used in our study),
 the synthetic data we generated, and a new version of the application where
