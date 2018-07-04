@@ -32,6 +32,13 @@ $ gem install work_queue
 5. Open RubyMine and go to `preference`->`plugin`, then click `Install plugin from disk`, and select the powerstation jar file just downloaded.<br/>
 ![Install plugin](../../screenshots/load_plugin.png)
 
+5. The tool needs to know all entrance controller actions from your application. It assumes them to be stored in a file called `calls.txt`. You can generate that file by running:
+
+```
+$rake routes | tail -n +2 | awk '{ for (i=1;i<=NF;i++) if (match($i, /.#./)) print $i}' | sed -e 's/#/,/g' | sort | uniq
+```
+in your app, and then copying it to `<APPDIR>/calls.txt`.
+
 6. Open your project with RubyMine and you're ready to go!
 
 </div>
