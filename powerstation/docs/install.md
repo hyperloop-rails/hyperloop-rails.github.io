@@ -39,7 +39,7 @@ $rake routes | tail -n +2 | awk '{ for (i=1;i<=NF;i++) if (match($i, /.#./)) pri
 ```
 in your app, and then copying it to `<APPDIR>/calls.txt`.
 
-6. Open your project with RubyMine and you're ready to go!
+7. Open your project with RubyMine and you're ready to go!
 
 </div>
 </div>
