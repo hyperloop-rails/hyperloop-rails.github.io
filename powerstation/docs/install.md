@@ -10,7 +10,7 @@ layout: powerstation
 
 Steps to install Powerstation:
 
-1. Download the compiled jruby from [compiled_jruby](https://github.com/hyperloop-rails/compiled-jruby) and configure your environment path as follows:
+1. Download the compiled jruby from [compiled_jruby](https://github.com/hyperloop-rails/powerstation/tree/master/powerstation/lib/compiled-jruby) and configure your environment path as follows:
 ```
 $ cd compiled-jruby
 $ export JRUBY_PATH=`pwd`/bin
