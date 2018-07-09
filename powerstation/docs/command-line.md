@@ -108,7 +108,7 @@ $ ls config/routes.rb
 
 * run the script to replace view rendering calls in controllers with all ruby code extracted from view files (mainly .erb files), and replace `ANALYZER_APP_PATH` with the path where the analyzer stores the application, e.g., `path_to_static-analyzer/applications/APP_NAME`:
 ```
-$ ./preprocess.sh ANALYZER_APP_PATH
+$ ruby main.rb -a $APP_NAME
 ```
 
 If `app/helpers` exists, all view rendering calls in helpers will be replaced too.
