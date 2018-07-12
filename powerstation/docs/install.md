@@ -24,7 +24,8 @@ $ gem install yard
 $ gem install activesupport
 $ gem install work_queue
 ```
- If your view file is written in haml, you also need to install python3 and bs4.
+  
+   If your view file is written in haml, you also need to install python3 and bs4.
 
 3. Download and install [RubyMine](https://www.jetbrains.com/ruby/).
 
