@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+    {% include pa_topnav.html %}
+
+    <div class="page-content">
+        <!-- <div class="wrapper"> -->
+        <div class="text-with-screenshots">
+            {{ content }}
+        </div>
+    </div>
+
+    {% include footer.html %}
+    {% include js_files.html %}
+</body>
+
+</html>
