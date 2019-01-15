@@ -87,7 +87,6 @@ If you wish to adopt a patch, click the "AcceptOrNot" on the "Panorama" menu, an
 
 ### Reproducd experiments in Section VII.
 * RQ1: how many opportunities does Panorama identify?
-
 ```
 $ cd /home/panorama-static-analyzer/controller_model_analysis/
 $ ./run_RQ1.sh
