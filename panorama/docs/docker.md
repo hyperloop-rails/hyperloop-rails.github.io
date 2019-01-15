@@ -47,7 +47,7 @@ $ ./start-chrome.sh
 * Choose an application and run it. We use a blogging application as example. You can go to the application folder (located in `/home`):
 ```
 $ cd /home/blog-app/
-$ bundle exec rails server
+$ bundle exec rails server &
 ```
 or simply use the script we provided to start the app, and pass app location as parameter:
 ```
@@ -85,7 +85,7 @@ If you wish to adopt a patch, click the "AcceptOrNot" on the "Panorama" menu, an
 * Panorama will change the application source code if you accept a patch, and then you can see the accelerated webpage:<br/>
 ![newpage](../../screenshots/newpage.png)<br/>
 
-### Reproducd experiments in Section x.
+### Reproducd experiments in Section VII.
 TODO
 
 </div>
