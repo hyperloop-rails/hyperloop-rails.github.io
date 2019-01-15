@@ -92,7 +92,6 @@ $ cd /home/panorama-static-analyzer/controller_model_analysis/
 $ ./run_RQ1.sh
 ```
 The detected optimized opportunities will be generated and found in folder ```/home/panorama-static-analyzer/controller_model_analysis/opportunities```.
-
 The generated patches can be found ```/home/panorama-static-analyzer/controller_model_analysis/patches```
 
 * RQ2: how much performance benefits?
