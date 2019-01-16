@@ -97,8 +97,8 @@ The generated patches can be found ```/home/panorama-static-analyzer/controller_
 * RQ2: how much performance benefits?
 //TODO
 
-* RQ3: are alternate view designs worthwhile?
-  Questionnaire can be found [here](https://uchicago.co1.qualtrics.com/jfe/preview/SV_3HNaVHXVyhsdDZr?Q_SurveyVersionID=&Q_CHL=preview).
+* RQ3: are alternate view designs worthwhile?<br/>
+  Questionnaire can be found [here](https://uchicago.co1.qualtrics.com/jfe/preview/SV_3HNaVHXVyhsdDZr?Q_SurveyVersionID=&Q_CHL=preview).<br/>
   The raw-data of answers from participants can be found [here](https://docs.google.com/spreadsheets/d/1EAq7ZhROnu2BCQkXYpV9XcrYSkna5FVxy2-WgOg5r2M/edit?usp=sharing), which are all de-identified. 
 
 * RQ4: how accurate is Panorama profiler?
