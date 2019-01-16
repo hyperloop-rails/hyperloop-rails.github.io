@@ -85,7 +85,7 @@ If you wish to adopt a patch, click the "AcceptOrNot" on the "Panorama" menu, an
 * Panorama will change the application source code if you accept a patch, and then you can see the accelerated webpage:<br/>
 ![newpage](../../screenshots/newpage.png)<br/>
 
-### Reproducd experiments in Section VII.
+### Reproduce experiments in Section VII.
 * RQ1: how many opportunities does Panorama identify?
 ```
 $ cd /home/panorama-static-analyzer/controller_model_analysis/
