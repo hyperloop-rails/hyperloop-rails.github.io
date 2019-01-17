@@ -102,7 +102,11 @@ The generated patches can be found ```/home/panorama-static-analyzer/controller_
   * The raw-data of answers from participants can be found [here](https://docs.google.com/spreadsheets/d/1EAq7ZhROnu2BCQkXYpV9XcrYSkna5FVxy2-WgOg5r2M/edit?usp=sharing), which are all de-identified. 
 
 * RQ4: how accurate is Panorama profiler?
-//TODO
+```
+$ cd /home/panorama-static-analyzer/controller_model_analysis/
+$ ./run_RQ4.sh
+```
+The complexity of tags will be printed out. And the end-to-end time for each design will be printed out, which comes from our previous running logs. 
 
 </div>
 </div>
