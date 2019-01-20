@@ -64,6 +64,11 @@ ActiveRecordQueryTrace.level = :rails
 For instance,<br/>
 <img src="../../screenshots/contentfor.png" width="200"><br/>
 
+* Add the following to the head of your application_controller.rb:
+```
+require 'will_paginate/array'
+```
+
 ### Download Panorama and install related packages
 * Clone the [Panorama source code](https://github.com/hyperloop-rails) from github.
 
