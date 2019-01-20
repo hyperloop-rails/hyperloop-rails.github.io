@@ -99,7 +99,7 @@ The generated patches can be found ```/home/panorama-static-analyzer/controller_
 cd /home/panorama-static-analyzer/controller_model_analysis/
 ./run_RQ2.sh
 ```
-The running logs are stored under ```/home/panorama-static-analyzer/controller_model_analysis/RQ2``` in both ```eoe``` and ```server```.
+The results are genearted from applications' running logs including end to end time and server time, which are stored under ```/home/panorama-static-analyzer/controller_model_analysis/RQ2``` in both ```eoe``` and ```server```.
 
 
 * RQ3: are alternate view designs worthwhile?<br/>
