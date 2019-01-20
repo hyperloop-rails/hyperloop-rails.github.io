@@ -22,6 +22,11 @@ gem 'render_async'
 gem 'react-rails-hot-loader'
 gem 'active_record_query_trace'
 ```
+You can also do this by
+```
+cd panorama-static-analyzer
+ruby add_gems.rb path-to-app/
+```
 
 * Add the following to `app/assets/javascripts/application.js` or `app/assets/javascripts/application.js.erb` (if such files exist, otherwise create the file):
 ```
