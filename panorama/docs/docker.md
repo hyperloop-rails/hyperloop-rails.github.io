@@ -95,7 +95,12 @@ The detected optimized opportunities will be generated and found in folder ```/h
 The generated patches can be found ```/home/panorama-static-analyzer/controller_model_analysis/patches```
 
 * RQ2: how much performance benefits?
-//TODO
+```
+cd /home/panorama-static-analyzer/controller_model_analysis/
+./run_RQ2.sh
+```
+The running logs are stored under ```/home/panorama-static-analyzer/controller_model_analysis/RQ2``` in both ```eoe``` and ```server```.
+
 
 * RQ3: are alternate view designs worthwhile?<br/>
   * Questionnaire can be found [here](https://uchicago.co1.qualtrics.com/jfe/preview/SV_3HNaVHXVyhsdDZr?Q_SurveyVersionID=&Q_CHL=preview).<br/>
