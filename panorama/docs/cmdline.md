@@ -68,6 +68,8 @@ For instance,<br/>
 ```
 require 'will_paginate/array'
 ```
+For instance,<br/>
+<img src="../../screenshots/application_controller.png"><br/>
 
 ### Download Panorama and install related packages
 * Clone the [Panorama source code](https://github.com/hyperloop-rails) from github.
