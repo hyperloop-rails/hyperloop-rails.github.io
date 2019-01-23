@@ -15,7 +15,7 @@ Below are steps to run Panorama (IDE version) to analyze and improve your own Ra
 
 1. Download and install [RubyMine](https://www.jetbrains.com/ruby/).
 
-2. Download [Panorama](https://plugins.jetbrains.com/plugin/11503-panorama).
+2. Download [Panorama IDE plugin](https://plugins.jetbrains.com/plugin/11503-panorama).
 
 3. Open RubyMine and go to `preference`->`plugin`, then click `Install plugin from disk`, and select the panorama jar file just downloaded.<br/>
 ![Install plugin](../screenshots/load_plugin.png)
