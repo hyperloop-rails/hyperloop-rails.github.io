@@ -1,6 +1,6 @@
 ---
 title: IDE version Panorama
-permalink: /panorama/docs/ide/
+permalink: /panorama/docs/ide
 layout: panorama
 ---
 
