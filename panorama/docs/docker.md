@@ -1,6 +1,6 @@
 ---
 title: How to run Panorama on docker image 
-permalink: /panorama/docs/docker
+permalink: /panorama/docs/docker/
 layout: panorama 
 ---
 
