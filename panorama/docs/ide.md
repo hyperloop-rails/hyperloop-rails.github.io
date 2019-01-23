@@ -1,6 +1,6 @@
 ---
-title: Installing PowerStation
-permalink: /powerstation/docs/install/
+title: IDE version Panorama
+permalink: /panorama/docs/ide/
 layout: powerstation
 ---
 
