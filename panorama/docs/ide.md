@@ -1,7 +1,7 @@
 ---
 title: IDE version Panorama
 permalink: /panorama/docs/ide/
-layout: powerstation
+layout: panorama
 ---
 
 <div class="container" markdown="1">
@@ -15,7 +15,7 @@ Steps to install IDE version Panorama:
 
 2. Download [Panorama](https://plugins.jetbrains.com/plugin/11503-panorama).
 
-3. Open RubyMine and go to `preference`->`plugin`, then click `Install plugin from disk`, and select the powerstation jar file just downloaded.<br/>
+3. Open RubyMine and go to `preference`->`plugin`, then click `Install plugin from disk`, and select the panorama jar file just downloaded.<br/>
 ![Install plugin](../../screenshots/load_plugin.png)
 
 4. Open your project with RubyMine and you're ready to go!
