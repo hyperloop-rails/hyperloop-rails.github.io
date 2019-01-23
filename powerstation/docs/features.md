@@ -100,10 +100,10 @@ Since string replacement is much faster that `link_to` rendering, if there are a
 Dead store query refer to the query is repeatedly issued to load different database contents into the same memory object while the object has not been used between the reloads. For example,
 ```
 blog.reload
-render blog
 blog.reload
+render blog
 ```
-where `blog.reload` issues a query. However, if the `render` function does not change any content of the blogs, there is no need to reload them again. Removing the last reload reduces unnecessary computation:
+where `blog.reload` issues a query. However, in between the too `blog.reload `, there is no reference to blog, there is no need to reload them again. Removing the first reload reduces unnecessary computation:
 ```
 blog.reload
 render blog
