@@ -71,6 +71,13 @@ require 'will_paginate/array'
 For instance,<br/>
 <img src="../../screenshots/application_controller.png"><br/>
 
+* create `calls.txt`
+The tool needs to know all entrance controller actions from your application. It assumes them to be stored in a file called `calls.txt`. You can generate that file by running:
+  ```
+  $rake routes | tail -n +2 | awk '{ for (i=1;i<=NF;i++) if (match($i, /.#./)) print $i}' | sed -e 's/#/,/g' | sort | uniq
+  ```
+  in your app, and then copying it to `<APPDIR>/calls.txt`.
+
 ### Download Panorama and install related packages
 * Clone the [Panorama source code](https://github.com/hyperloop-rails) from github.
 
