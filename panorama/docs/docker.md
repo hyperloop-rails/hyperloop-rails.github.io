@@ -67,23 +67,23 @@ $ ./compute_performance.sh PW-blog /home/blog-app/ BlogsController,index
 For other applications, replace `PW-blog` with application name, `/home/blog-app/` with the path to the app source, and `BlogsController,index` with the controller action you want to exam.
 
 * In the RubyMine IDE, open the app and turn on the Panorama:<br/>
-<img src="../../screenshots/start_panorama.png" width="300"><br/>
+<img src="../screenshots/start_panorama.png" width="300"><br/>
 
 ### Read the heatmap and check Panorama's suggested patches
 * Refresh the webpage it will look like this:<br/>
-![heatmap](../../screenshots/heatmap.png)<br/>
+![heatmap](../screenshots/heatmap.png)<br/>
 Lefthand side is a legend shows the "heat", i.e., the cost to generate each element, with cooler color (on the side of scale 0) indicating less time and warmer color indicating more time. By default it shows the static cost, and you can choose other measuring method like using real cost numbers. 
 
 * When you move the cursor to an element and click, it will show patches that Panorama can generate to accelerate the element:<br/>
-<img src="../../screenshots/choices1.png" width="300"><br/>
-<img src="../../screenshots/choices2.png" width="300"><br/><br/>
+<img src="../screenshots/choices1.png" width="300"><br/>
+<img src="../screenshots/choices2.png" width="300"><br/><br/>
 Click the patch (e.g., pagination) and you can view the code change:
-![codechange](../../screenshots/codechange.png)<br/><br/>
+![codechange](../screenshots/codechange.png)<br/><br/>
 It shows which file it will change, the old code and the new patch code.
 If you wish to adopt a patch, click the "AcceptOrNot" on the "Panorama" menu, and the click "ok".
 
 * Panorama will change the application source code if you accept a patch, and then you can see the accelerated webpage:<br/>
-![newpage](../../screenshots/newpage.png)<br/>
+![newpage](../screenshots/newpage.png)<br/>
 
 ### Reproduce experiments in Section VII.
 * RQ1: how many opportunities does Panorama identify?
