@@ -101,7 +101,8 @@ $ gem install activesupport
 $ gem install work_queue
 ```
 ### Start Panorama Static Analyer and Panorama IDE plugin
-* Before running Panorama, you may first visit a few webpages in the chrome. This will generate a log file, which will be analyzed by Panorama.
+* Before running Panorama, you may first visit a few webpages in the chrome. This will generate a log file, which will be analyzed by Panorama.<br/>
+For instance, you have start the application `blog-app` whose path is `/home/blog-app`
 
 * Then go to the panorama folder and run the script to start a thread to monitor the browser activity, and send a request to change the source code if a patch suggestion is granted:
 ```
