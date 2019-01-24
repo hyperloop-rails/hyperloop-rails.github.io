@@ -43,6 +43,13 @@ A RubyMine IDE will be opened.
 ```
 $ ./start-chrome.sh
 ```
+A chrome browser will be launched.
+
+* Start mysql server:
+```
+$ ./start-mysql.sh
+```
+Mysql server will start with OK status.
 
 * Choose an application and run it. We use a blogging application as example. You can go to the application folder (located in `/home`):
 ```
