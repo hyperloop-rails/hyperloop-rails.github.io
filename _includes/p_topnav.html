@@ -13,6 +13,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
+                <li {% if page.sectionid=='install' %} class="active" {% endif %}><a href="{{ "/" | prepend: site.baseurl }}">Home</a></li>
                 <li {% if page.sectionid=='install' %} class="active" {% endif %}><a href="{{ "/powerstation/docs/install" | prepend: site.baseurl }}">install</a></li>
                 <li {% if page.sectionid=='howtouse' %} class="active" {% endif %}><a href="{{ "/powerstation/docs/howtouse" | prepend: site.baseurl }}">how to use</a></li>
                 <li {% if page.sectionid=='features' %} class="active" {% endif %}><a href="{{ "/powerstation/docs/features" | prepend: site.baseurl }}">features</a></li>
