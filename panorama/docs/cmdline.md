@@ -116,9 +116,9 @@ You will see the page with heatmap showing the cost of each element:<br/>
 
 * When you move the cursor to an element and click, it will show patches that Panorama can generate to accelerate the element:<br/>
 <img src="../../screenshots/choices2.png" width="300"><br/>
-When you click the patch (e.g., pagination), the patch will be automatically added to your source code.<br/>
-Then you can refresh the page and see the new webpage:<br/>
-![newpage](../../screenshots/newpage.png)<br/>
+* Panorama will change the application source code if you accept a patch, and then you can see the accelerated webpage:<br/>
+![newpage](../screenshots/newpage.png)<br/>
+
 
 </div>
 </div>
