@@ -119,6 +119,7 @@ You will see the page with heatmap showing the cost of each element:<br/>
 When you click the patch (e.g., pagination), the patch will be automatically added to your source code.<br/>
 Then you can refresh the page and see the new webpage:<br/>
 ![newpage](../../screenshots/newpage.png)<br/>
+
 </div>
 </div>
 </div>
