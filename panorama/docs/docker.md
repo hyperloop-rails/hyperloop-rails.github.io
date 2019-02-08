@@ -29,7 +29,8 @@ docker run -it \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
 panorama/chrome:fifth
 ```
-If you are using Mac, make sure [XQuartz](https://www.xquartz.org) is installed and opened before running the script.
+If you are using Mac, make sure [XQuartz](https://www.xquartz.org) is installed and opened before running the script. Set the preference as the picture below:<br/>
+![preference](../screenshots/x.png)<br/>
 
 ### Start RubyMine and run the application
 * Run script on the docker to start RubyMine:
