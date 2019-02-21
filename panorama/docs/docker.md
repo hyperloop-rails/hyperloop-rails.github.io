@@ -17,7 +17,7 @@ Below are steps to run Panorama and reproduce the experiments on docker.
 $ docker pull panorama/chrome:fifth
 ```
 
-* If you are using Mac OSX, copy the following into a script file (e.g., `start.sh`), and login to the docker image by running this script:
+* If you are using Mac OSX, ensure `xhost +` can be executed successfully, and copy the following into a script file (e.g., `start.sh`), and login to the docker image by running this script:
 ```
 #!/bin/bash
 IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
@@ -25,7 +25,7 @@ docker run -it \
 -e DISPLAY=$IP:0 \
 --privileged \
 -p 127.0.0.1:3000:3000 \
--v "${HOME}/.Xauthority:/root/.Xauthority" \
+-v "${HOME}/.Xauthority:/root/.Xauthority" \ # you can also remove this
 -v /tmp/.X11-unix:/tmp/.X11-unix \
 panorama/chrome:fifth
 ```
@@ -35,7 +35,12 @@ If you are using Linux, execute the following script
 ```
 $ export DISPLAY=127.0.0.1
 $ xhost +
-$ sudo docker run -it --net host -e DISPLAY=127.0.0.1:0  --privileged -p 127.0.0.1:3000:3000 -v "${HOME}/.Xauthority:/root/.Xauthority" -v /tmp/.X11-unix:/tmp/.X11-unix panorama/chrome:fifth
+$ sudo docker run -it \
+--net host -e DISPLAY=127.0.0.1:0 \
+--privileged -p 127.0.0.1:3000:3000 \
+-v "${HOME}/.Xauthority:/root/.Xauthority" \ # this can be removed
+-v /tmp/.X11-unix:/tmp/.X11-unix \
+panorama/chrome:fifth
 ```
 
 ### Start RubyMine and run the application
