@@ -33,7 +33,7 @@ Make sure [XQuartz](https://www.xquartz.org) is installed and opened before runn
 ![preference](../screenshots/x.png)<br/>
 If you are using Linux, execute the following script
 ```
-$ export DISPLAY=127.0.0.1
+$ export DISPLAY=127.0.0.1:0
 $ xhost +
 $ sudo docker run -it \
 --net host -e DISPLAY=127.0.0.1:0 \
@@ -42,6 +42,7 @@ $ sudo docker run -it \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
 panorama/chrome:fifth
 ```
+If `xhost +` reports the error "unable to open display", then go to the `/etc/gdm3/custom.conf`, add `DisallowTCP=false` under `[security]` and restart your machine.
 
 ### Start RubyMine and run the application
 * Run script on the docker to start RubyMine:
