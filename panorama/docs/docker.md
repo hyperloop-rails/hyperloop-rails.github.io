@@ -42,7 +42,7 @@ $ sudo docker run -it \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
 panorama/chrome:fifth
 ```
-If `xhost +` reports the error "unable to open display", then go to the `/etc/gdm3/custom.conf`, add `DisallowTCP=false` under `[security]` and restart your machine.
+If `xhost +` reports the error `unable to open display`, then go to the `/etc/gdm3/custom.conf`, add `DisallowTCP=false` under `[security]` and restart your machine.
 
 ### Start RubyMine and run the application
 * Run script on the docker to start RubyMine:
