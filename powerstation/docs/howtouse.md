@@ -10,7 +10,7 @@ layout: powerstation
 
 We use a small [blogging project](https://github.com/jwyoung1818/blog) to explain how to use PowerStation.
 
-You can also watch the introduction [video](http://bit.ly/panorama_tutorial).
+You can also watch the introduction [video](https://www.youtube.com/watch?v=bba_L0_IAuo).
 
 1. Open your project with RubyMine:<br/>
 ![Open Project](../../screenshots/load_project.png)<br/>
