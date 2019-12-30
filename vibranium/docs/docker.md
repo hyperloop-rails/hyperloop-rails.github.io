@@ -21,17 +21,17 @@ $ docker pull managedataconstraints/data-constraints-analyzer
 ### Reproduce experiments in the paper.
 
 * Figure2 
-```
-$ cd main278/formatchecker/ 
-$ ruby run_app.rb --tva
-```
-The data is stored in the [excel file](http://bit.ly/app-versions-vs-constraint-changes).
+  ```
+  $ cd main278/formatchecker/ 
+  $ ruby run_app.rb --tva
+  ```
+  The data is stored in the [excel file](http://bit.ly/app-versions-vs-constraint-changes).
 
 * Table 4: Data constraints in web applications
-```
-$ ruby run_app.rb  --latest-version
-```
-The data is presented in the [excel file](http://bit.ly/data-constraints-in-web-applications) under the `latest-version #constraints` tab. 
+  ```
+  $ ruby run_app.rb  --latest-version
+  ```
+  The data is presented in the [excel file](http://bit.ly/data-constraints-in-web-applications) under the `latest-version #constraints` tab. 
 
 * Table 5: # Constraints in DB but not in Application
 
@@ -86,6 +86,7 @@ The data is presented in the [excel file](http://bit.ly/data-constraints-in-web-
   Go to the `main278/formatchecker/`  script folder and run:
   ```$ cd issues```
   ```$ python extract_breakdown.py```
+  
 * Table 10: # Mismatch constraints 
 
   Details presented in the [excel file](https://bit.ly/32s0gMs)
