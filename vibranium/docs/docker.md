@@ -107,7 +107,7 @@ $ docker pull managedataconstraints/data-constraints-analyzer
 
 * [Issues we report to developers and their feedback (Section 7)](https://docs.google.com/spreadsheets/d/1d9wh0BxLLgQaSKSxFTA3ou5RH7P5D8LKaHQ1paU45u8/edit?usp=sharing)
 
-* Source Code for better error message gem: https://github.com/manangeconstraints/better_error_msg_gem
+* Source Code for better error message [gem](https://github.com/manangeconstraints/better_error_msg_gem).
 
 </div>
 </div>
