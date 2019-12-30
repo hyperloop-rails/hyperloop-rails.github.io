@@ -27,7 +27,7 @@ $ ruby run_app.rb --tva
 ```
 The data is stored in the [excel file](http://bit.ly/app-versions-vs-constraint-changes).
 
-* Table 4
+* Table 4: Data constraints in web applications
 ```
 $ ruby run_app.rb  --latest-version
 ```
