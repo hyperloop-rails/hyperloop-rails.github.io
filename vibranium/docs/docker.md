@@ -31,11 +31,9 @@ The data is stored in the [excel file](http://bit.ly/app-versions-vs-constraint-
 ```
 $ ruby run_app.rb  --latest-version
 ```
-The data is presented in http://bit.ly/data-constraints-in-web-applications under the `latest-version #constraints` tab. 
+The data is presented in the [excel file](http://bit.ly/data-constraints-in-web-applications) under the `latest-version #constraints` tab. 
 
 * Table 5: # Constraints in DB but not in Application
-
-  Details: presented in http://bit.ly/constraints-mismatch. 
 
   Go to the `main278/formatchecker/`  script folder and run:
   ```
@@ -45,6 +43,8 @@ The data is presented in http://bit.ly/data-constraints-in-web-applications unde
   ```
   $ grep “db_present_model_absent” log/output.log
   ```
+  Detailed data is presented in the [excel file](http://bit.ly/constraints-mismatch). 
+  
 * Table 6: # Constraints in Application but not in DB 
 
   Go to the `main278/formatchecker/`  script folder and run:
