@@ -48,7 +48,7 @@ $ ruby api_breakdown_spread_sheets.rb
 ```
 The summarized breakdown will be written to output/api_total_breakdown.xlsx. 
 
-Details presented in the `summary` tab of  http://bit.ly/top-5-popular-types-of-different-layers 
+Details presented in the `summary` tab of  the [excel file](http://bit.ly/top-5-popular-types-of-different-layers)
 
 * Table 8: app versions vs constraint changes
 
