@@ -45,13 +45,13 @@ Extract the results from the log file:
 
 ```$ grep “db_present_model_absent” log/output.log```
 
-Table 6: # Constraints in Application but not in DB 
+* Table 6: # Constraints in Application but not in DB 
 
-Go to the `main278/formatchecker/`  script folder and run:
+  Go to the `main278/formatchecker/`  script folder and run:
 
-```$ ruby run_app.rb -s ```
+  ```$ ruby run_app.rb -s ```
 
-Extract the results from the log file:
+  Extract the results from the log file:
 
 ```$ grep “model_present_db_absent” log/output.log```
 
