@@ -18,7 +18,7 @@ layout: vibranium
 
     <div class="row">
         <div class="col-md-12">
-            <h2 class="header-light regular-pad">What is Panorama?</h2>
+            <h2 class="header-light regular-pad">What is Vibranium?</h2>
             <!-- <blockquote> -->
               <p class="main-page-content">Vibranium is the  the first in-depth study of data-constraint problems in web applications. Our study provides moti-vations and guidelines for future research to help developers better manage data constraints. 
                 </p>
