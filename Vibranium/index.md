@@ -2,6 +2,7 @@
 ---
 title: Vibranium
 layout: vibranium 
+
 ---
 
 <div class="p-header-container jumbotron">
