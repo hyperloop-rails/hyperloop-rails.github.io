@@ -34,9 +34,10 @@ $ ruby run_app.rb  --latest-version
 The data is presented in http://bit.ly/data-constraints-in-web-applications under the `latest-version #constraints` tab. 
 
 * Table 5: # Constraints in DB but not in Application
+
 Details: presented in http://bit.ly/constraints-mismatch. 
 
-Reproduce: Go to the `main278/formatchecker/`  script folder and run:
+Go to the `main278/formatchecker/`  script folder and run:
 
 ```$ ruby run_app.rb -s ```
 
@@ -45,15 +46,16 @@ Extract the results from the log file:
 ```$ grep “db_present_model_absent” log/output.log```
 
 Table 6: # Constraints in Application but not in DB 
-Details presented in the [excel file](http://bit.ly/constraints-mismatch).
 
-Reproduce: Go to the `main278/formatchecker/`  script folder and run:
+Go to the `main278/formatchecker/`  script folder and run:
 
 ```$ ruby run_app.rb -s ```
 
 Extract the results from the log file:
 
 ```$ grep “model_present_db_absent” log/output.log```
+
+Detailed data presented in the [excel file](http://bit.ly/constraints-mismatch).
 
 * Table 7:  Top 5 popular types of different layer
 
@@ -80,23 +82,29 @@ $ ruby run_app.rb --tva
 ```
 
 Table 9:  Data-constraint issues in real-world apps
+
 Raw issues in the [issue file](http://bit.ly/data-constraints-issues-in-Rails) 
 
-Reproduce: go to the `main278/formatchecker/`  script folder and run:
+Go to the `main278/formatchecker/`  script folder and run:
 
 ```$ cd issues```
 
 ```$ python extract_breakdown.py```
 
 Table 10: # Mismatch constraints 
-Details presented in https://bit.ly/32s0gMs
 
-Reproduce: go to the `data-constraint-checker` script folder and run:
+Details presented in the [excel file](https://bit.ly/32s0gMs)
 
-```$ ruby run_app.rb -s ```
+Go to the `data-constraint-checker` script folder and run:
+
+```
+$ ruby run_app.rb -s 
+```
 
 Then, to extract the results from the log file:
-```$ grep “mismatch_constraint” log/output.log```
+```
+$ grep “mismatch_constraint” log/output.log
+```
 
 * [User study results](http://bit.ly/error-message-user-study)
 * [User study questionnaire](http://bit.ly/user-questionnaire)
