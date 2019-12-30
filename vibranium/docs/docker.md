@@ -8,8 +8,8 @@ layout: vibranium
 <div class="row" markdown="1">
 <div class="col-md-12" markdown="1">
 
-We provide a docker image that contains Panorama and all the applications we use in the paper.
-Below are steps to run Panorama and reproduce the experiments on docker.
+We provide a docker image that contains the script checkers in Vibranium and all the applications we use in the paper.
+Below are steps to run it and reproduce the experiments on docker.
 
 ### Pull and run the docker image 
 * Login to you docker hub account and pull the [docker image](https://hub.docker.com/repository/docker/managedataconstraints/data-constraints-analyzer):
