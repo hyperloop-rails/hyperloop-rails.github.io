@@ -21,20 +21,16 @@ $ docker pull managedataconstraints/data-constraints-analyzer
 ### Reproduce experiments in the paper.
 
 * Figure2 
-
 ```
 $ cd main278/formatchecker/ 
 $ ruby run_app.rb --tva
 ```
-
 The data is stored in the [excel file](http://bit.ly/app-versions-vs-constraint-changes).
 
 * Table 4
-
 ```
 $ ruby run_app.rb  --latest-version
 ```
-
 The data is presented in http://bit.ly/data-constraints-in-web-applications under the `latest-version #constraints` tab. 
 
 * Table 5
@@ -42,23 +38,17 @@ The data is presented in http://bit.ly/data-constraints-in-web-applications unde
 * Table 6 
 
 * Table 7:  Top 5 popular types of different layer
-
-Details presented in the `summary` tab of  http://bit.ly/top-5-popular-types-of-different-layers 
-
-Reproduce: go to the `data-constraint-checker` script folder and run:
-
+Go to the `main278/formatchecker/` script folder and run:
 ``` 
 $ ruby run_app.rb  --api-breakdown
 ```
-
 This will generate a single log file for each application under ```log/api_breakdown_#{app_name}.log```
-
 ```
 $ ruby api_breakdown_spread_sheets.rb 
 ```
-
 The summarized breakdown will be written to output/api_total_breakdown.xlsx. 
 
+Details presented in the `summary` tab of  http://bit.ly/top-5-popular-types-of-different-layers 
 
 * Table 8: app versions vs constraint changes
 
