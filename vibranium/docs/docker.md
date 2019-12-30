@@ -91,7 +91,7 @@ $ docker pull managedataconstraints/data-constraints-analyzer
 
   Details presented in the [excel file](https://bit.ly/32s0gMs)
 
-  Go to the `data-constraint-checker` script folder and run:
+  Go to the `main278/formatchecker/`script folder and run:
   ```
   $ ruby run_app.rb -s 
   ```
