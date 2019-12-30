@@ -38,23 +38,23 @@ The data is presented in http://bit.ly/data-constraints-in-web-applications unde
 Details: presented in http://bit.ly/constraints-mismatch. 
 
 Go to the `main278/formatchecker/`  script folder and run:
-
-```$ ruby run_app.rb -s ```
-
+```
+$ ruby run_app.rb -s 
+```
 Extract the results from the log file:
-
-```$ grep “db_present_model_absent” log/output.log```
-
+```
+$ grep “db_present_model_absent” log/output.log
+```
 * Table 6: # Constraints in Application but not in DB 
 
   Go to the `main278/formatchecker/`  script folder and run:
-
-  ```$ ruby run_app.rb -s ```
-
+  ```
+  $ ruby run_app.rb -s 
+  ```
   Extract the results from the log file:
-
-```$ grep “model_present_db_absent” log/output.log```
-
+  ```
+  $ grep “model_present_db_absent” log/output.log
+  ```
 Detailed data presented in the [excel file](http://bit.ly/constraints-mismatch).
 
 * Table 7:  Top 5 popular types of different layer
@@ -76,36 +76,28 @@ Details presented in the `summary` tab of  the [excel file](http://bit.ly/top-5-
 Details presented in the `constraint-evolution` tab of the [excel file](http://bit.ly/app-versions-vs-constraint-changes) 
 
 Reproduce: go to the `main278/formatchecker/` script folder and run:
-
 ```
 $ ruby run_app.rb --tva 
 ```
-
 Table 9:  Data-constraint issues in real-world apps
 
 Raw issues in the [issue file](http://bit.ly/data-constraints-issues-in-Rails) 
 
 Go to the `main278/formatchecker/`  script folder and run:
-
 ```$ cd issues```
-
 ```$ python extract_breakdown.py```
-
 Table 10: # Mismatch constraints 
 
 Details presented in the [excel file](https://bit.ly/32s0gMs)
 
 Go to the `data-constraint-checker` script folder and run:
-
 ```
 $ ruby run_app.rb -s 
 ```
-
 Then, to extract the results from the log file:
 ```
 $ grep “mismatch_constraint” log/output.log
 ```
-
 * [User study results](http://bit.ly/error-message-user-study)
 * [User study questionnaire](http://bit.ly/user-questionnaire)
 
