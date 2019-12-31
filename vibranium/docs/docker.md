@@ -26,13 +26,13 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
 * Figure2 
   ```
   $ cd main278/formatchecker/ 
-  $ ruby run_app.rb --tva
+  $ ruby run_apps.rb --tva
   ```
   The data is stored in the [excel file](http://bit.ly/app-versions-vs-constraint-changes).
 
 * Table 4: Data constraints in web applications
   ```
-  $ ruby run_app.rb  --latest-version
+  $ ruby run_apps.rb  --latest-version
   ```
   The data is presented in the [excel file](http://bit.ly/data-constraints-in-web-applications) under the `latest-version #constraints` tab. 
 
@@ -40,7 +40,7 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
 
   Go to the `main278/formatchecker/`  script folder and run:
   ```
-  $ ruby run_app.rb -s 
+  $ ruby run_apps.rb -s 
   ```
   Extract the results from the log file:
   ```
@@ -52,7 +52,7 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
 
   Go to the `main278/formatchecker/`  script folder and run:
   ```
-  $ ruby run_app.rb -s 
+  $ ruby run_apps.rb -s 
   ```
   Extract the results from the log file:
   ```
@@ -64,7 +64,7 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
 
   Go to the `main278/formatchecker/` script folder and run:
   ``` 
-  $ ruby run_app.rb  --api-breakdown
+  $ ruby run_apps.rb  --api-breakdown
   ```
   This will generate a single log file for each application under ```log/api_breakdown_#{app_name}.log```
   ```
@@ -80,7 +80,7 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
 
   Go to the `main278/formatchecker/` script folder and run:
   ```
-  $ ruby run_app.rb --tva 
+  $ ruby run_apps.rb --tva 
   ```
 * Table 9:  Data-constraint issues in real-world apps
 
@@ -96,7 +96,7 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
 
   Go to the `main278/formatchecker/`script folder and run:
   ```
-  $ ruby run_app.rb -s 
+  $ ruby run_apps.rb -s 
   ```
   Then, to extract the results from the log file:
   ```
