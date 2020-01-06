@@ -102,9 +102,13 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
   ```
   $ grep “mismatch_constraint” log/output.log
   ```
-* [User study results](http://bit.ly/error-message-user-study)
+* User study 
+  
+  results can be accessed through [google drive](http://bit.ly/error-message-user-study) or [here](./user-study.html)
 
-* [User study questionnaire](http://bit.ly/user-questionnaire)
+  User study questionnaire can be found [here](http://bit.ly/user-questionnaire).
+  
+  Both file can be found under the folder `main278/user-study` on the docker image.
 
 * The table in the Discussion section of [issues in Django](http://bit.ly/data-constraints-issues-in-Django) 
 
