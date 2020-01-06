@@ -92,7 +92,7 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
   
 * Table 10: # Mismatch constraints 
 
-  Details presented in the [excel file](https://bit.ly/32s0gMs)
+  Details presented in the [excel file](http://bit.ly/constraint-mismatch)
 
   Go to the `main278/formatchecker/`script folder and run:
   ```
