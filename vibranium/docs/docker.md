@@ -85,6 +85,9 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
   ```
   $ ruby run_apps.rb --tva 
   ```
+  
+  The output will be stored at the ```../log/ouput_#{app_name}.log``` file for each corresponding app.
+
 * Table 9:  Data-constraint issues in real-world apps
 
   Raw issues in the [issue file](http://bit.ly/data-constraints-issues-in-Rails) 
