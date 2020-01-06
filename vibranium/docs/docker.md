@@ -14,7 +14,7 @@ Below are steps to run it and reproduce the experiments on docker.
 ### Pull and run the docker image 
 * Login to you docker hub account and pull the [docker image](https://hub.docker.com/repository/docker/managedataconstraints/data-constraints-analyzer):
 ```
-$ docker pull managedataconstraints/data-constraints-analyzer
+$ docker pull managedataconstraints/data-constraints-analyzer:first
 ```
 ```
 $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-analyzer:first
