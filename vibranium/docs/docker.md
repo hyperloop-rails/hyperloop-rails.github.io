@@ -88,9 +88,13 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
 
   Go to the `main278/formatchecker/`  script folder and run:
   
-  ```$ cd issues```
+  ```
+  $ cd issues
+  ```
   
-  ```$ python extract_breakdown.py```
+  ```
+  $ python extract_breakdown.py
+  ```
   
 * Table 10: # Mismatch constraints 
 
