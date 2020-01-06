@@ -28,7 +28,10 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
   $ cd main278/formatchecker/ 
   $ ruby run_apps.rb --tva
   ```
-  The data is stored in the [excel file](http://bit.ly/app-versions-vs-constraint-changes).
+  
+  The output will be stored at the `../log/ouput_#{app_name}.log` file for each corresponding app. 
+  
+  The data is also stored in the [excel file](http://bit.ly/app-versions-vs-constraint-changes).
 
 * Table 4: Data constraints in web applications
   ```
@@ -95,6 +98,8 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
   ```
   $ python extract_breakdown.py
   ```
+  
+  The breakdown will be both printed out on the console and stored in the `output.xlsx` file.
   
 * Table 10: # Mismatch constraints 
 
