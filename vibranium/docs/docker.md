@@ -116,6 +116,21 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
 
 * Source Code for better error message [gem](https://github.com/manangeconstraints/better_error_msg_gem).
 
+
+### Apply on other applications
+
+* Prepare your application
+
+  Go to `main278/formatchecker/apps/` folder, clone your application there. 
+  
+  ```git clone git_repo_link app_name```
+  
+* Run our scripts.
+
+  Go to `main278/formatchecker/constraint_analyzer` folder. 
+  
+  ```ruby main.rb -a ../apps/app_name --h```
+
 </div>
 </div>
 </div>
