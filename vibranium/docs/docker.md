@@ -46,7 +46,7 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
   ```
   $ grep “db_present_model_absent” log/output.log
   ```
-  Detailed data is presented in the [excel file](http://bit.ly/constraints-mismatch). 
+  Detailed data is presented in the [excel file](http://bit.ly/constraint-mismatch). 
   
 * Table 6: # Constraints in Application but not in DB 
 
@@ -58,7 +58,7 @@ $ docker run -it -p 127.0.0.1:3000:3000 managedataconstraints/data-constraints-a
   ```
   $ grep “model_present_db_absent” log/output.log
   ```
-  Detailed data presented in the [excel file](http://bit.ly/constraints-mismatch).
+  Detailed data presented in the [excel file](http://bit.ly/constraint-mismatch).
 
 * Table 7:  Top 5 popular types of different layer
 
